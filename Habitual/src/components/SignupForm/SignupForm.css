@@ -1,0 +1,96 @@
+:root {
+  --light-blue: #00aaff;
+  --gray: #888888;
+  --white: #ffffff;
+  --primary-color: #007bff;
+  --danger-color: #ff4d4d;
+}
+
+.SignupForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 40vh;
+  border: 1px solid var(--light-blue);
+  min-width: 40vw;
+  border-radius: 20px;
+  padding: 2vh;
+  background: rgba(255, 255, 255, 0.8); /* Light background for readability */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  backdrop-filter: blur(10px); /* Blurring effect */
+
+  @media (max-width: 800px) {
+    border: 0;
+    width: 90%;
+    min-height: 45vh;
+  }
+
+  @media (max-width: 500px) {
+    width: 95%;
+    min-height: 50vh;
+  }
+
+  .form__label {
+    width: 90%;
+    padding: 0;
+    font-size: clamp(1.5vh, 2vw, 2.5vh);
+    text-transform: capitalize;
+    margin-top: 2vh;
+    text-align: left;
+    color: var(--primary-color); /* Primary color for labels */
+    font-weight: bold;
+  }
+
+  .form__item {
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    padding: 1vh 2vw;
+    color: var(--gray);
+    font-size: clamp(2vh, 1.5vw, 2vh);
+    background: var(--white); /* Background color for inputs */
+    margin-top: 1vh; /* Space between inputs */
+  }
+
+  .btn--login {
+    margin: 3vh;
+    padding: 1vh 2vw;
+    width: 40%;
+    font-size: clamp(2vh, 1.5vw, 2vh);
+    background-color: var(--primary-color); /* Primary color for buttons */
+    color: var(--white); /* White text color */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+
+    &:hover {
+      background-color: violet;
+      transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+    @media (max-width: 500px) {
+      width: 60%;
+    }
+  }
+
+  .login__input-wrapper {
+    width: 90%;
+    margin-top: 2vh; /* Space above input wrapper */
+
+    @media (max-width: 500px) {
+      width: 95%;
+    }
+  }
+
+  .error {
+    border: 0.5px solid var(--danger-color);
+  }
+
+  .error-message {
+    color: var(--danger-color);
+    padding-bottom: 0;
+    font-size: clamp(1.5vh, 1.1vw, 1.5vh);
+  }
+}

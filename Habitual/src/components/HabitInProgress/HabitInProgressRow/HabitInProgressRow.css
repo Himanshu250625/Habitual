@@ -1,0 +1,118 @@
+.HabitInProgressRow {
+  display: flex;
+  max-width: 100%;
+  padding: 0.1vw 0;
+  justify-content: space-between;
+  font-size: 5vw;
+
+  @media (max-width: 500px) {
+    .buttons_container {
+      margin-right: 1vw;
+      max-height: 3vh;
+      flex: 1 1 30% !important;
+    }
+  }
+
+  .table-data {
+    flex: 1 1 20%;
+    text-align: center;
+    font-size: clamp( 1.7vw, 2.8vh);
+    display: flex;
+    justify-content: center;
+
+    .table-data--important {
+      color: var(--pink);
+      font-family: 'LilitaOne';
+      font-size: larger;
+    }
+
+    .important {
+      color: var(--pink);
+    }
+  }
+
+  & button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .btn--delete {
+    background-color: var(--light-yellow);
+    border-radius: 0 20px 20px 0;
+    flex: 1 1 50%;
+    color: var(--lightblue);
+
+    & svg {
+      max-width: 2.5vw;
+
+      @media (max-width: 500px) {
+        max-width: 4vw;
+      }
+    }
+  }
+
+  .btn--start {
+    margin-left: 0.5vw;
+    background-color: var(--pink);
+    color: var(--light-blue);
+    border-radius: 0;
+    width: 5vw;
+    color: var(--white);
+    font-family: 'JosefinSans';
+
+    border-radius: 20px 0px 0px 20px;
+    flex: 1 1 50%;
+
+    @media (max-width: 500px) {
+      font-size: clamp(0.7vh, 0.8vw, 1vh);
+    }
+  }
+
+  .btn--start:hover {
+    background-color: var(--dark-pink);
+  }
+
+  .btn--delete:hover {
+    background-color: var(--dark-yellow);
+  }
+
+  .buttons_container {
+    margin-right: 1vw;
+  }
+
+  & h3 {
+    font-size: clamp(1vh, 1.5vw, 2vh);
+    color: var(--lightblue);
+    flex: 1 1 20%;
+  }
+
+  .progress {
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+
+    & > span {
+      width: 100%;
+      height: 46px;
+      background-color: var(--light-yellow);
+      display: block;
+      border-radius: 3px;
+      position: relative;
+
+      .table-date__progress {
+        content: ' ';
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background-color: var(--light-green);
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.HabitInProgressRow:hover {
+  box-shadow: rgba(0, 0, 0, 0.138) 0px 4px 12px;
+}

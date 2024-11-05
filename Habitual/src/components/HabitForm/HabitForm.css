@@ -1,0 +1,134 @@
+.HabitForm {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-family: 'LilitaOne', sans-serif;
+  color: var(--gray);
+
+  padding-bottom: 100px;
+
+  .container {
+    width: 100%;
+  }
+
+  .form__label {
+    width: 100%;
+    padding: 0;
+    font-size: clamp(3vh, 2vw, 3vw);
+    text-transform: lowercase;
+    margin-top: 2vh;
+    text-align: left;
+  }
+
+  .form__item {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 1vh 2vw;
+    color: var(--gray);
+    font-size: clamp(2vh, 1vw, 1vw);
+  }
+
+  & textarea {
+    font-size: clamp(2vh, 1vw, 1vw);
+    font-family: sans-serif;
+    color: var(--gray);
+    min-height: 100px;
+  }
+
+  .showEmoji {
+    cursor: pointer;
+    border-radius: 3vh;
+    background-color: var(--gray);
+    padding: 1.5vh;
+    color: #fff;
+    margin-bottom: 1vh;
+  }
+
+  .emoji-wrapper {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2vh;
+  }
+
+  #emoji {
+    font-size: 5vh;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 2vh;
+    text-align: center;
+    padding: 0;
+
+    @media (min-width: 1400px) {
+      font-size: 4vh;
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (min-width: 2000px) {
+      font-size: 4vh;
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .EmojiPickerReact {
+    max-width: 100%;
+    width: 100% !important;
+  }
+
+  .container-category {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .habit__button-wrapper {
+    width: 100%;
+  }
+
+  .btn--submit {
+    padding: 2vh 3vh;
+    color: var(--white);
+    font-size: 3vh;
+    margin-top: 5vh;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .btn:disabled {
+    opacity: 0.7;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: var(--white);
+  font-size: 3vh;
+  width: 200px;
+  height: 100px;
+  color: var(--gray);
+  z-index: 4;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%);
+  box-shadow: 4px 4px 4px;
+}
+
+.popup[data-show='false'] {
+  display: none;
+}
+
+.popup[data-show='true'] {
+  display: flex;
+}

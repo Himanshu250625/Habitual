@@ -1,0 +1,77 @@
+.HabitCard {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 20px;
+  justify-content: space-between;
+  @media (min-width: 1200px) and (max-width: 2500px) {
+    height: 70px;
+
+  }
+
+  .habit__type {
+    display: flex;
+    align-items: center;
+    padding: 0.3vh;
+    margin-left: 3vw;
+    font-size: clamp(8vh, 3vw, 2.5vh);
+  }
+
+  & > a.link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 13px;
+    color: var(--ligt-blue);
+  }
+
+  & h3 {
+    font-size: clamp(3.5vh, 2vw, 2.5vh);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--lightblue);
+  }
+
+  .btn--complete {
+    background-color: var(--light-green);
+    color: white;
+    border-radius: 0;
+    width: 13vw;
+    font-size: clamp(2vh, 2vw, 2.5vh);
+  
+  }
+
+  & .btn--edit {
+    background-color: var(--light-yellow);
+    font-size: clamp(2vh, 2vw, 2.5vh);
+    border-radius: 0;
+    color: var(--lightblue);
+  }
+
+  .btn--delete {
+    background-color: var(--light-yellow);
+    font-size: clamp(2vh, 2vw, 2.5vh);
+    border-radius: 0 20px 20px 0;
+    color: var(--lightblue);
+  }
+
+  .completed {
+    text-decoration: line-through !important;
+  }
+
+  .btn--uncomplete {
+    background-color: var(--dark-green);
+    border-radius: 0;
+    width: 13vw;
+    font-size: clamp(1vh, 2vw, 2.5vh);
+  
+  }
+}
+
+.HabitCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}

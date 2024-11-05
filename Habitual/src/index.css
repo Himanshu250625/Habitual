@@ -1,0 +1,177 @@
+
+
+@font-face {
+  font-family: 'LilitaOne';
+  src: url('./../public/fonts/LilitaOne-Regular.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'JosefinSans';
+  src: url('./../public/fonts/JosefinSans-VariableFont_wght.ttf')
+    format('TrueType');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* COLORS */
+
+:root {
+  --white: #ffffff;
+  /* form figma */
+  --pink: #e5b3c9;
+  --dark-pink: #c2859f;
+  --blue: #64aac8;
+  --dark-blue: #5998b4;
+  --light-blue: #030f15;
+  --gray: #6f6f6f;
+  --light-yellow: #f1eaaa;
+  --dark-yellow: #f0e374;
+  --yellow: #f5c105;
+  --red: #e53d20;
+  --orange: #f39e4f;
+  --light-green: #9adaa1;
+  --dark-green: #7bae82;
+  /* media query sizes */
+  --mobile-breakpoint: 500px;
+  --tablet-breakpoint: 769px;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'JosefinSans', 'Roboto', 'Helvetica', sans-serif;
+  height: 100%;
+  background-color: #a4d8ee;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-wrap: break-word;
+}
+
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem 0.8rem;
+  font-family: 'JosefinSans';
+  font-size: clamp(0.5vh, 0.9vw, 1.1vh);
+  line-height: 1.2;
+  color: var(--white);
+  background-color: var(--pink);
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--dark-pink);
+}
+
+.link {
+  padding: 0;
+  font-size: clamp(1vh, 0.5vw, 1.1vh);
+  color: var(--white);
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  padding: 0.4rem 0.4rem;
+}
+
+.link.active {
+  cursor: default;
+  pointer-events: none;
+  color: var(--gray);
+}
+
+.title--uppercase {
+  text-transform: uppercase;
+}
+
+.habit-quit {
+  background: linear-gradient(
+    to bottom left,
+    rgb(240, 188, 210) 0%,
+    var(--white) 45%
+  );
+}
+
+.habit-build {
+  background: linear-gradient(to bottom left, var(--blue) 0%, var(--white) 45%);
+}

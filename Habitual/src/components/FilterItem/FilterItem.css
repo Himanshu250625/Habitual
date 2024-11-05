@@ -1,0 +1,58 @@
+.FilterItem {
+  font-size: clamp(2.4vh, 1vw, 2vh);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5vh;
+  flex: 1;
+
+  @media (max-width: 700px) {
+    font-size: clamp(1.1vh, 1vw, 2vh);
+  }
+  @media (max-width: 500px) {
+    min-width: 10vh;
+  }
+
+  & label {
+    max-width: 10vw;
+
+    @media (max-width: 500px) {
+      max-width: 10vh;
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 15vh;
+    }
+  }
+
+  & input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: var(--white);
+    width: 1.55em;
+    height: 1.55em;
+    border: 0.15em solid var(--dark-blue);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+
+  & input[type="radio"]::before {
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1.4em 1.4em var(--pink);
+  }
+
+  & input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,27 @@
+.HabitInProgress {
+  font-size: 3vw;
+  margin-bottom: 3vh;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2.5vh 0;
+  z-index: 1;
+  margin: 3vh 2vw 1.5vh 2vw;
+
+
+  & h2 {
+    color: var(--gray);
+    font-family: 'LilitaOne';
+    font-size: clamp( 4vw, 3.5vh);
+  }
+
+  .table {
+    width: 100%;
+    padding: 1vh;
+  }
+
+  .table-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+  }
+}

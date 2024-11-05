@@ -1,0 +1,158 @@
+.GlobalHabitCard {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.138) 0px 4px 12px;
+  padding: 1vh 1vw;
+  border-radius: 20px;
+  position: relative;
+
+  gap: 0.5vw;
+
+  @media (min-width: 800px) {
+    width: 300px;
+  }
+
+  @media (min-width: 2500px) {
+    width: 600px;
+  }
+
+  & h3 {
+    font-size: clamp(1.1vh, 1.4vw, 1.35vh);
+
+    &.habit__type {
+      color: var(--light-blue);
+    }
+  }
+
+  & .habit__favorite_btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: 0;
+    background-color: transparent;
+
+    @media (max-width: 501px) {
+      right: 4px;
+      top: 10px;
+    }
+
+    & svg {
+      width: 2.5vh;
+      cursor: pointer;
+      stroke: var(--light-blue);
+      fill: none;
+
+      @media (max-width: 501px) {
+        width: 2vh;
+      }
+    }
+
+    .active {
+      fill: var(--light-blue);
+      stroke: none;
+    }
+
+    & svg:hover {
+      fill: var(--light-blue);
+      stroke: none;
+    }
+  }
+
+  .btn--add {
+    font-size: clamp(1vh, 1vw, 0.7vw);
+    background-color: var(--light-green);
+    color: white;
+    margin-bottom: 1vw;
+
+    @media (max-width: 501px) {
+      width: 100%;
+      padding: 0.9vh 0.3vh;
+    }
+  }
+
+  .btn--add:hover {
+    background-color: var(--dark-green);
+  }
+
+  & a {
+    color: var(--white);
+  }
+
+  .btn--pink {
+    background-color: var(--pink);
+  }
+
+  .btn--pink:hover {
+    background-color: var(--dark-pink);
+  }
+
+  .container--emoji {
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.138) 0px 4px 12px;
+    width: 2.8vw;
+    height: 2.8vw;
+    padding: 0.5vw;
+    margin: 5px;
+    background-color: var(--white);
+
+    @media (max-width: 500px) {
+      border-radius: 50%;
+      width: 2.8vh;
+      height: 2.8vh;
+      padding: 1vh;
+      margin: 0.3vh;
+    }
+
+    & span {
+      font-size: clamp(0.7vh, 1.5vw, 2.5vh);
+
+      @media (max-width: 500px) {
+        font-size: 1.2vh;
+      }
+    }
+  }
+
+  .habit-card__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    .habit__description {
+      font-size: clamp(0.9vh, 1.6vw, 1vh);
+      text-wrap: balance;
+      color: var(--light-blue);
+      text-wrap: balance;
+      width: 100%;
+    }
+  }
+
+  .quit {
+    color: var(--dark-pink);
+  }
+
+  .build {
+    color: var(--dark-blue);
+  }
+}
+
+.GlobalHabitCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.GlobalHabitCard--quit {
+  background: linear-gradient(
+    to bottom left,
+    rgb(240, 188, 210) 0%,
+    var(--white) 45%
+  );
+}
+
+.GlobalHabitCard--build {
+  background: linear-gradient(to bottom left, var(--blue) 0%, var(--white) 45%);
+}

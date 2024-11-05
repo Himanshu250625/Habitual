@@ -1,0 +1,9 @@
+.LoadingPage {
+  background-color: #ffe4f0;
+  & .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
